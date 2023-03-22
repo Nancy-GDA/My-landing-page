@@ -51,11 +51,22 @@ li{
     color: var(--title2);
 }
 /*Pages Text*/
-h3{
-    width: 60%;
+h2{
     font-family: var(--texts) ;
     font-size: var(--extraLarge);
     color: var(--title);
+}
+h3{
+    width: 60%;
+    font-family: var(--texts) ;
+    font-size: var(--titleMedium);
+    color: var(--title);
+}
+h4{
+    font-size: var(--small);
+    text-align: center;
+    position: relative;
+    bottom: -56px;
 }
 .title{
     display: flex;
@@ -64,9 +75,7 @@ h3{
     align-items:center;
     color: var(--title);
     font-size: var(--titleLarge);
-    margin: 0x 0px 8px 0px;
 }
-
 a{
     text-decoration: none;
     color: var(--title2);
@@ -74,7 +83,6 @@ a{
 a:hover{
     color: white;
 }
-
 p{
     color:var(--texto) ;
     text-align: center;
@@ -84,12 +92,10 @@ p{
 }
 img{
     border-radius: 10px;
-    width: 450px;
-    height: 350px;
+    width: 350px;
+    height: 300px;
     margin: auto;
 }
-
-
 .page-body{
     display: flex;
     flex-direction: column;
@@ -181,8 +187,8 @@ img{
     right: 13rem;
     width: 280px; 
     height: 220px;
+    top: 30px;
 }
-
 .card {
     position: relative;
     width: 125px;
@@ -191,19 +197,21 @@ img{
     justify-content: center;
     align-items: center;
     border-radius: 4px;
-    box-shadow: -1px 0px 6px 0px var(--title2);
-  }
-
-  .card::before {
+    background-color: transparent;
+    box-shadow:-1px -1px 7px 1px var(--menu);
+    border: 1px solid var(--menu);
+    color: var(--title2);
+    padding-bottom: 8px;
+}
+.card::before {
     content: '';
     position: absolute;
     top: 20px;
     left: 0;
     width: 100%;
     height: 100%;
-  }
-  
-  .card::after {
+}
+.card::after {
     content: '';
     position: absolute;
     top: 0;
@@ -211,23 +219,21 @@ img{
     width: 100%;
     height: 100%;
     filter: blur(30px);
-   
-  }
+}
   .card img {
     position: absolute;
     z-index: 3;
     scale: 0.8;
-    opacity: 0.25;
+    opacity: 0.7;
     transition: 0.6s;
-  }
-
-  .card:hover img {
+    padding-bottom: 5px;
+}
+.card:hover img {
     scale: 0.8;
     opacity: 0.9;
     transform: translateY(-60px);
-
-  }
-  .card .content {
+}
+.card .content {
     position: absolute;
     z-index: 3;
     bottom: 0;
@@ -236,24 +242,23 @@ img{
     align-items: center;
     transform: scale(0);
     transition: 0.5s;
-  }
-  
-  .card:hover {
+}
+.card:hover {
     transform: scale(1);
     bottom: 5px;
-    box-shadow: -1px 0px 6px 0px #86cbcc;
-  }
- 
-   h4 .logo {
+    box-shadow: -1px 0px 6px 0px var(--title2);
+    color: var(--menu);
+    background-color: transparent;
+}
+h4 .logo {
     width: 15px;
     position: relative;
     top: 30px;
-  }
-  
-  .sci h4 {
+}
+.sci h4 {
     position: relative;
     text-decoration: none;
-    color: rgba(255, 255, 255, 0.5);
+    color: var(--texto2);
     background: rgba(0, 0, 0, 0.2);
     fill: currentColor;
     width: 30px;
@@ -263,26 +268,38 @@ img{
     align-items: center;
     border-radius: 4px;
     transition: 0.5s;
-  }
-  
-  .sci h4:hover {
-    fill: currentColor;
-    color: rgba(255, 255, 255, 1);
-  }
-  
-h4{
-    font-size: var(--small);
-    text-align: center;
-    position: relative;
-    bottom: -56px;
 }
+.sci h4:hover {
+    fill: currentColor; 
+}
+  
+
  .logo{
     width: 60px;
     height: 60px;
     position: relative;
     bottom: 40px;
  }
+.h3-project{
+    position: relative;
+    left: 38rem;
+}
 
+.h2-calculator{
+    position: relative;
+    left: 34rem;
+    top: -1rem;
+}
+.h2-ppp{
+    position: relative;
+    left: -45rem;
+    top: 23rem;
+}
+.h2-mokepon{
+    position: relative;
+    left: 25rem;
+    top: -1rem
+}
 .projects{
     display: flex;
     justify-content: start;
@@ -291,20 +308,59 @@ h4{
 }
 .container-project{
     display: flex;
-    flex-direction: column;
+    flex-wrap:wrap ;
     width: 100%;
-    gap: 20px;
+    gap: 50px;
+    border: 1px solid red;
 }
+
 .project{
     display: flex;
-    width: 100%;
-    height: 300px;
-   
+    width: 40%;
+    height: 330px;
+    box-shadow: -1px 0px 6px 0px var(--title2);
+    box-sizing: border-box;
 }
-.proyect img{
-    width: 480px;
-    height: 280px;
+.project:nth-child(1){
+    position:absolute;
+    left: 0rem;
+    background-color: blue;
 }
+.project:nth-child(2){
+    position:relative;
+    background-color: red;
+}
+.project:nth-child(3){
+    position: relative;
+    background-color: orange;
+}
+#calculator{
+    position: relative;
+    top: 90px;
+}
+#mokepon{
+    position: relative;
+    top: 60px;
+}
+#ppp{
+    position: relative;
+    top: 60px;
+}
+.img-project{
+    width: 300px;
+    height: 200px;
+}
+.container-tools{    
+    position: relative;
+    height: 50px;
+    left: 3rem;
+    top: 12rem;
+}
+.tools{
+    width: 45px;
+    height: 45px;
+}
+
 .contact{
     display: flex;
     flex-direction: column;
