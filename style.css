@@ -14,6 +14,7 @@
     --texts: 'Didact Gothic', sans-serif;
     /*Fonts-sizes*/
     --small:1rem;
+    --btn:1.12rem;
     --medium:1.25rem;
     --large:1.4rem;
     --extraLarge:1.56rem;
@@ -21,19 +22,22 @@
     --titleLarge:2.5rem;
 
 }
-
+head{
+    background-color:var(--menu) ;
+}
 body{
     box-sizing: 0px;
     padding: 0px;
     margin: 0px;
     font-family: var(--texts); 
     letter-spacing: 1.5px;
+    background-color: aliceblue;
 }
 .menu{
     display: flex;
     align-items: center;
     justify-content: center;
-    background:var(--menu);
+    background:var(--texto2);
     opacity: 3;
     width: 100%;
     height: 6.25rem;
@@ -41,13 +45,13 @@ body{
 }
 .menu ul{
     display: flex;
-    width: 90%;
+    width: 100%;
     gap:1.5rem;  
 }
 .menu li{
     list-style-type: none;
     font-size: var(--medium);
-    color: var(--title2);
+    color: var(--menu);
 }
 
 /*Pages Text*/
@@ -78,7 +82,7 @@ h4{
 }
 a{
     text-decoration: none;
-    color: var(--title2);
+    color: var(--menu);
     padding-left: 2rem;
 }
 a:hover{
@@ -88,7 +92,7 @@ p{
     color:var(--texto) ;
     text-align: center;
     font-family: var(--texts);
-    line-height: 1.4;
+    line-height: 1.6;
 }
 img{
     border-radius: 10px;
@@ -101,7 +105,6 @@ img{
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    padding: 1.56rem;
 }
 .beginning{
     display: flex;
@@ -184,19 +187,20 @@ img{
 }
 .working{
     position: relative;
-    left: 11rem;
-    width: 14rem;
+    left: 7rem;
+    width: 21rem;
     height: 12rem;
 }
- .logo{
-    width: 60px;
-    height: 60px;
+ .networks{
+    width: 50px;
+    height: 50px;
     position: relative;
     bottom: 10px;
+    margin:0 20px;
  }
- .logo:hover {
-    -webkit-transform:scale(1.5);
-    transform:scale(1.8)
+ .networks:hover {
+    transform:scale(1.2);
+    gap:30px
 }
 .projects{
     display: flex;
@@ -206,11 +210,10 @@ img{
 }
 .h3-project{
     position: relative;
-    left: 40rem;
 }
 .h3project{
     position: relative;
-    left: 7rem;
+    right: 18rem;
     top: -7rem;
 }
 .h2-calculator{
@@ -268,21 +271,21 @@ img{
 .box-2{
     width: 19rem;
     top: 2.5rem;
-    left: 36rem;
+    left: 38rem;
 }
 
 .box-3{
     width: 18rem;
-    left: 36rem;
+    left: 42rem;
     top: 2.5rem;
 }
 .box-4{
     width: 10.5rem;
     top: 2.5rem;
-    left: 18rem;
+    left: 20rem;
 }
 .box-5{
-    width: 100%;
+    width: 90%;
     top: -1.5rem;
     left: 7rem;
     color: red;
@@ -308,7 +311,7 @@ img{
 }
 #mokepon{
     position: relative;
-    width: 33rem;
+    width: 35rem;
     height: 14rem;
     bottom: 2rem;
 }
@@ -318,29 +321,99 @@ img{
     height: 11rem;
     bottom: 3rem;
 }
-.container-tools{    
+/* .container-tools{    
     position: relative;
+    width: 8rem;
     height: 50px;
-    left: 3rem;
-    top: 12rem;
-} 
+}  */
+
 .tools{
     width: 2.18rem;
     height: 2.18rem;
 }
-.view-project{
+/* .tool1{
+    bottom: 7rem;
+    left: 16rem;
+}
+.tool2{
+    bottom: 7rem;
+    left: 42rem;
+}
+.tool3{
+    bottom: 7rem;
+    left: 44rem;
+}
+.tool4{
+    width: 10rem;
+    bottom: 7rem;
+    left: 18rem;
+} */
+.btn{
+    display: flex;
+    cursor: pointer;
+    width: 16rem;
+    height: 3.12rem;
+    background-color:var(--menu);
+    border-radius: 1.5rem;
+    border: none;
+    padding-top: 1.3rem;
+    justify-content: center;
+    align-items: center;
+    font-size:var(--btn) ;
+    border: 1px solid blue;
+}
+.container-btn{
+    display: flex;
+    width: 100%;
+}
+.btn:hover{
+    box-shadow: -1px 0px 6px 0px var(--title2);
+    background-color: transparent;
+}
+.btn span{
+    width: 16rem;
+    height: 50px;
+    font-family: var(--texts);
     text-align: center;
-    margin-left:20rem ;
+    letter-spacing: 2px;
+    color: white;
+    padding: 0 10px;
+}
+.btn:hover span{
+    color: var(--title);
+}
+.btn svg {
+    padding: 0 5px;
+    position: relative;
+    bottom: 0.23rem;
+}
+.btn:hover  svg path{
+    fill: black;
 }
 
+.main-container-btn{
+    width:100%;
+    display: flex;
+    justify-content: center;
+    padding: 5.5rem 0;
+}
 .contact{
     display: flex;
     flex-direction: column;
-    width: 37.5rem;
-    height: 25rem;
+    width: 100%;
+    height: 12rem;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--texto2);
+    color: white;
+    padding-top: ;
+}
+.h3-Contact{
+    text-align: center;
+    padding-bottom: 2rem;
+    color: white;
 }
 .container-contact{
     width: 31.25;
     height: 18.75;
-
 }
