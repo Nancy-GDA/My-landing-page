@@ -13,6 +13,7 @@
     /*Fonts*/
     --texts: 'Didact Gothic', sans-serif;
     /*Fonts-sizes*/
+    --extraSmall:0.93rem;
     --small:1rem;
     --btn:1.12rem;
     --medium:1.25rem;
@@ -58,7 +59,7 @@ header{
 /*Pages Text*/
 .title{
     display: flex;
-    width: 70%;
+    width: 30rem;
     justify-content: center;
     align-items:center;
     color: var(--title);
@@ -70,7 +71,6 @@ h2{
     color: var(--title);
 }
 h3{
-    width: 60%;
     font-family: var(--texts) ;
     color: var(--title);
     font-size: var(--titleMedium);
@@ -87,6 +87,10 @@ a{
 }
 a:hover{
     color: white;
+}
+
+article,h4,h3,h2{
+    cursor: pointer;
 }
 p{
     color:var(--texto) ;
@@ -165,7 +169,12 @@ img{
 .h3-Skills{
     position: relative;
     bottom: 1rem;
-    left: 23rem;
+    left: 2rem;
+    width: 11rem;
+}
+
+.skills-tools {
+    width: 55rem;
 }
 .skills{
     display: flex;
@@ -181,7 +190,7 @@ img{
     display: flex;
     justify-content: space-evenly;
     align-items: center;
-    width: 70%;
+    width: 63rem;
     height: 200px;
     background-color: var(--texto2);
     box-shadow: -1px 0px 6px 0px white;
@@ -190,7 +199,7 @@ img{
 }
 .working{
     position: relative;
-    left: 4rem;
+    left: 17rem;
     width: 21rem;
     height: 12rem;
 }
@@ -213,12 +222,13 @@ img{
 }
 .h3-project{
     position: relative;
-    left: .6rem;
+    width: 9rem;
+    height: 3rem;
 }
 .h3project{
     position: relative;
-    right: 13.5rem;
-    top: -7rem;
+    right: 14.5rem;
+    bottom: 7rem;
 }
 .h2-calculator{
     position: relative;
@@ -289,15 +299,19 @@ img{
 }
 .box-4{
     position: relative;
-    width: 100%;
     top: 8rem;
-    left: 1.3rem;
+    left: 1.5rem;
+    font-size: var(--extraSmall)
 }
 .box-5{
     position: relative;
     width: 90%;
     bottom: 0.5rem;
     left: 2.5rem;
+    color: red;
+}
+
+.box-5:hover span{
     color: red;
 }
 .project:hover span{
@@ -331,33 +345,12 @@ img{
     height: 11rem;
     bottom: 6rem;
 }
-/* .container-tools{    
-    position: relative;
-    width: 8rem;
-    height: 50px;
-}  */
+/
 
 .tools{
     width: 2.18rem;
     height: 2.18rem;
 }
-/* .tool1{
-    bottom: 7rem;
-    left: 16rem;
-}
-.tool2{
-    bottom: 7rem;
-    left: 42rem;
-}
-.tool3{
-    bottom: 7rem;
-    left: 44rem;
-}
-.tool4{
-    width: 10rem;
-    bottom: 7rem;
-    left: 18rem;
-} */
 .btn{
     display: flex;
     cursor: pointer;
@@ -430,3 +423,11 @@ img{
     width: 50px;
     height:50px ;
 }
+
+
+
+@media screen and (max-width: 768px) {
+
+  }
+  
+  @media screen and (max-width: 480px) {
